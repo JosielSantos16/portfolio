@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto | Josiel Santos</title>
+    <link rel="stylesheet" href="project.css">
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-list">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#sobre">Sobre mim</a></li>
+          <li><a href="index.html#projetos">Projetos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <button id="close-btn" class="close-btn" title="Fechar projeto">&times;</button>
+    <main>
+      <section class="project-detail">
+        <div id="project-counter" class="project-counter"></div>
+        <h2 id="project-title"></h2>
+        <div id="image-container"> 
+          <img
+            id="project-image"
+            src=""
+            alt=""
+            class="project-image"
+          >
+        </div>
+        <p id="project-desc"></p>
+        <div id="project-links" class="project-links"></div>
+
+        <button id="prev-btn" class="arrow-btn arrow-left">&larr;</button>
+        <button id="next-btn" class="arrow-btn arrow-right">&rarr;</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Josiel Santos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      const projects = [
+        {
+          key: 'heavenly',
+          title: 'Heavenly',
+          image: './img/heavenly.png',
+          desc: 'O projeto é um site de horóscopo, com previsões e analises astrologicas detalhadas aos usuarios. O site foi desenvolvimento por uma empresa ficticia denomida "Cosmos Corporation" compostas por quatro pessoas que planejaram e trabalharam juntos do incio ao fim do projeto',
+          links: [
+            { label: 'Ver Online', url: 'https://heavenly-cosmoscorporation.netlify.app/' }
+          ]
+        },
+        {
+          key: 'solidarizze',
+          title: 'Solidarizze',
+          image: './img/solidarizze.png',
+          desc: 'O projeto consiste em um projeto FullStack de uma plataforma web voltada para doações de campanhas solidária. Onde o doador cria conta, visualiza campanhas ativas, Realiza doações e administra, visualiza as ações de um doador, cria, edita e remove campanhas',
+          links: [
+            { label: 'Ver Online', url: 'https://solidarizze.netlify.app/' }
+          ]
+        },
+        {
+          key: 'codeburger',
+          title: 'CodeBurger',
+          image: './img/codeburger.png',
+          desc: 'O CodeBurger é um Projeto Full Stack online para uma hamburgueria que está sendo desenvolvido durante o curso do DevClub . A aplicação conta com uma interface moderna e responsiva, permitindo que os usuários se cadastrem, façam login, naveguem pelo cardápio e realizem pedidos. O projeto está na fase final de desenvolvimento e em breve será hospedado',
+          links: [
+            { label: 'Ver Online', url: 'https://seusite.com/codeburger' }
+          ]
+        }
+      ];
+
+      const params = new URLSearchParams(window.location.search);
+      const key = params.get('project');
+      const index = projects.findIndex(p => p.key === key);
+      const data = projects[index];
+      const counterEl = document.getElementById('project-counter');
+      const titleEl = document.getElementById('project-title');
+      const imgEl = document.getElementById('project-image');
+      const descEl = document.getElementById('project-desc');
+      const linksContainer = document.getElementById('project-links');
+      const imageContainer = document.getElementById('image-container');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      
+      document.getElementById('close-btn').addEventListener('click', () => {
+        window.location.href = 'index.html#projetos';
+      });
+
+      if (data) {
+        counterEl.textContent = `${index + 1}/${projects.length}`;
+        titleEl.textContent = data.title;
+        imgEl.src = data.image;
+        imgEl.alt = data.title;
+        descEl.textContent = data.desc;
+
+        if (data.key === 'codeburger') {
+          const container = document.createElement('div');
+          container.className = 'imagem-container';
+          
+          const ribbon = document.createElement('div');
+          ribbon.className = 'ribbon-diagonal';
+          ribbon.textContent = 'EM BREVE';
+
+          const oldImg = document.querySelector('.project-image');
+          container.appendChild(ribbon);
+          container.appendChild(oldImg.cloneNode(true));
+          oldImg.parentNode.replaceChild(container, oldImg);
+        }
+
+        data.links.forEach(link => {
+          const a = document.createElement('a');
+          a.href = link.url;
+          a.target = '_blank';
+          a.textContent = link.label;
+          linksContainer.appendChild(a);
+        });
+      } else {
+        counterEl.style.display = 'none';
+        titleEl.textContent = 'Projeto não encontrado';
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+      }
+
+      function goToProject(idx) {
+        window.location.href = `project.html?project=${projects[idx].key}`;
+      }
+
+      prevBtn.onclick = index > 0 ? () => goToProject(index - 1) : null;
+      nextBtn.onclick = index < projects.length - 1 ? () => goToProject(index + 1) : null;
+      prevBtn.disabled = index <= 0;
+      nextBtn.disabled = index >= projects.length - 1;
+    </script>
+  </body>
+</html>
