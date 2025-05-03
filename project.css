@@ -305,12 +305,27 @@ footer {
 }
 
 
+
 @media (max-width: 768px) {
-  .close-btn,
-  .arrow-btn {
+  header {
+    display: none !important;
+  }
+  
+  main {
+    padding-top: 2rem !important; 
+  }
+
+  .close-btn {
+    top: 20px !important; 
+  }
+  .close-btn {
     width: 35px;
     height: 35px;
     font-size: 1.2rem;
+  }
+
+  .arrow-btn {
+    display: none !important;
   }
   
   .arrow-left {
@@ -383,10 +398,132 @@ footer {
   margin: 0;
 }
 
+/* Adicione estas regras no final do seu CSS */
+
 @media (max-width: 768px) {
-  .ribbon-diagonal {
-    width: 160%;
-    padding: 8px 0;
-    font-size: 1rem;
+  .project-detail {
+    max-width: 90%;
+    padding: 1.5rem;
+    margin-top: 60px;
   }
+
+  .project-links a {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+  }
+
+  .project-counter {
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .arrow-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-top: -200px;
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+
+  .close-btn {
+    top: 70px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .project-detail h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .project-detail p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-detail {
+    padding: 1rem;
+  }
+
+  .arrow-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    margin-top: -150px;
+  }
+
+  .close-btn {
+    top: 60px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .project-detail h2 {
+    font-size: 1.3rem;
+  }
+
+  .project-links a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Correções gerais */
+.project-links {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-links a {
+  margin-left: 0 !important;
+  width: max-content;
+  min-width: 200px;
+}
+
+.imagem-container {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.ribbon-diagonal {
+  font-size: 0.9rem;
+  padding: 6px 0;
+}
+
+/* Ajuste específico para iPad Mini em modo retrato */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .project-detail {
+    max-width: 90%;
+    padding: 2rem;
+  }
+  
+  .arrow-btn {
+    margin-top: -250px;
+  }
+  
+  .project-links a {
+    min-width: 250px;
+  }
+}
+
+/* Melhoria na imagem do projeto */
+.project-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
