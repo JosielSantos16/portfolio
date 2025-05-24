@@ -95,6 +95,7 @@ footer {
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .projetos-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 8px 16px rgba(79,70,229,0.2);
@@ -220,7 +221,7 @@ footer {
 }
 
 .close-btn:hover {
-   box-shadow: 0 0 12px #ec4899, 0 0 24px #ec4899, 0 0 36px #ec4899;
+  box-shadow: 0 0 12px #ec4899, 0 0 24px #ec4899, 0 0 36px #ec4899;
   transform: translateY(-2px);
 }
 

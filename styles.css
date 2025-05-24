@@ -140,9 +140,8 @@ main { padding-top: 100px; }
 .intro {
   display: flex; flex-wrap: wrap; align-items: center;
   justify-content: space-between;
-  padding: 5rem 2rem;
   background: linear-gradient(to right, #0a0f1c 40%,  #4f46e5 );
-  padding: 200px;
+  padding: 150px;
   margin-top: -100px;
 }
 
