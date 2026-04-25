@@ -1,0 +1,50 @@
+.whoami{
+  background: linear-gradient(to right, #0a0f1c 40%,  #4f46e5 );
+  display: flex; 
+  padding: 150px;
+}
+
+.whoami p { margin-top: 1rem;}
+
+.sobre-img{
+  margin-top: 80px;
+  margin-left: 100px; 
+  border-radius: 20px;
+  border: 5px solid  #0a0f1c
+}
+
+
+.mydescricao {
+  margin-left: 250px;
+  margin-top: 0;
+  font-size: 20px;
+  max-width: 600px; 
+  line-height: 1.6;
+  text-align: justify; 
+  word-wrap: break-word;
+  width: 100%; 
+}
+
+
+
+.training {
+  background: linear-gradient(to right, #0a0f1c 40%,  #4f46e5 );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: -35px;
+}
+
+.training h2 {
+  margin-bottom: 50px;
+}
+
+.div-training{ display: flex; justify-content: center;}
+.timeline { display: flex; flex-direction: column; gap: 2rem; }
+.timeline-item {
+  background: #000811;
+  padding: 1.5rem; border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.timeline-item time { font-size: 0.9rem; color: #A0A0A0; }

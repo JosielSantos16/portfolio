@@ -1,0 +1,245 @@
+
+
+.contatos{
+  position: relative;
+  padding: 6rem 2rem;
+  background-color: transparent;
+  color: #e2e8f0;
+}
+
+.contatos-titulo{
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.contatos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contatos-card p {
+  border-radius: 8px;
+  padding: 2rem;
+} 
+
+.formulario-contato {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.group-form{
+  margin-bottom: 1.5rem;
+}
+
+.campo-form{
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: #e2eBe8f0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.campo-form:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 10px #7c3aed;
+}
+
+.botao-form{
+  color: #e2eBe8f0;
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.botao-form:hover{
+  transform: translate(-4px);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 rgba(37, 211, 102, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(37, 211, 102, 0.7);
+    transform: scale(1.03);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 rgba(37, 211, 102, 0.7);
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.botao-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #25D366;        
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  width: 100%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.botao-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.whatsapp-logo {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.contatos-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.info-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+
+.social-links li a img[src="https://cdn-icons-png.flaticon.com/512/174/174857.png"] {
+  filter: brightness(0) invert(1);
+}
+
+.social-links li a img[src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"] {
+  filter: brightness(0) invert(1);
+}
+
+.gmail-icon {
+  width: 1.5rem; 
+  height: 1.5rem; 
+  margin-right: 0.75rem; 
+}
+
+.phone-icon {
+  color: #4caf50; 
+  font-size: 1.5rem;
+}
+
+.location-icon {
+  color: #007bff; 
+  font-size: 1.5rem;
+}
+
+.info-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.social-list {
+  display: flex;
+  gap: 1rem;
+}
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  font-size: 1.25rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+
+.contatos-tab {
+  position: absolute;
+  top: 50%;
+  right: -2.5rem;
+  transform: translateY(-50%) rotate(90deg);
+  background-color: #2d1f62;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+
+footer {
+  text-align: center; padding: 2rem;
+  color: #A0A0A0;
+}

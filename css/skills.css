@@ -1,0 +1,115 @@
+
+
+.skills {
+  max-width: 1000px;   
+  width: 100%;          
+  margin: 100px auto 0; 
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  box-shadow: inset 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.skills-title {
+  font-size: 2.2rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 160px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.skill-item {
+  position: relative;
+  width: 125px;
+  height: 120px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  backdrop-filter: blur(4px);
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.2), -6px -6px 12px rgba(255,255,255,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 4px;
+  background: #04D9B2;
+  border-radius: 2px 2px 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-6px);
+  box-shadow: inset 4px 4px 8px rgba(0,0,0,0.3),
+              inset -4px -4px 8px rgba(255,255,255,0.05);
+}
+
+.skill-item:hover::after {
+  opacity: 1;
+}
+
+.skill-item img {
+  width: 50%;
+  transition: filter 0.3s;
+}
+
+.skill-item:hover img {
+  filter: drop-shadow(0 0 10px rgba(4,217,178,1));
+}
+
+.skills {
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 10px;
+  padding: 3rem 1rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  box-shadow: inset 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(80px, 1fr));  
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.skill-name {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: white; 
+}
+
+@media (min-width: 640px) {
+  .skills-list {
+    grid-template-columns: repeat(4, minmax(90px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-list {
+    grid-template-columns: repeat(6, minmax(90px, 1fr));
+  }
+}

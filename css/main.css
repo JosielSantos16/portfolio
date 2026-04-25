@@ -1,0 +1,136 @@
+.btn,
+.curriculo {
+  vertical-align: middle;
+}
+
+.btn {
+  border: 3px solid transparent;
+  border-radius: 2rem;
+  background-image:
+    linear-gradient(#0a0f1c, #0a0f1c),          
+    linear-gradient(to right, #ec4899, #1e1b4b);   
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  display: inline-block;
+  color: white;
+  width: 250px; height: 50px;
+  line-height: 44px;           
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.curriculo {
+  background: linear-gradient(to right, #1e1b4b, #ec4899);
+  box-shadow: 0 0 8px #ec4899, 0 0 16px #ec4899;
+  display: inline-block;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.2s;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  height: 50px;
+  width: 250px;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 15px;
+}
+
+.curriculo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+main { padding-top: 100px; }
+
+.intro {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #0a0f1c 40%,  #4f46e5 );
+  padding: 150px;
+  margin-top: -100px;
+}
+
+.intro-text h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #00BFFF, #104E8B);
+  -webkit-background-clip: text;
+}
+
+span{
+  color: #425cff;
+}
+
+.span {
+  color: rgb(235,72,154)
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  text-align: left;
+}
+
+.intro-text ul { display: flex; gap: 1.5rem; margin: 1.5rem 0; }
+.intro-text ul li{ list-style-type: none;}
+
+.intro-image{
+  margin-right: 100px;
+  animation: flutuar 5s ease-in-out infinite;
+}
+
+.intro-image img {
+  border-radius: 50%;
+  box-shadow: 0 0 8px #75dffe, 0 0 16px #75dffe;
+}
+
+section {
+  padding: 4rem 2rem;
+  background: #000000;
+  margin-bottom: 2rem;
+}
+section h2 {
+  font-size: 2rem; color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px rgb(52,39,40);
+}
+
+.faixa {
+  overflow: hidden;
+  background: linear-gradient(to right, #1e1b4b, #ec4899);
+  margin-top: -40px;
+  padding: 3px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.faixa-content {
+  display: inline-block;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  animation: scroll 20s linear infinite;
+}
+
+.faixa-content span {
+  margin: 0 2rem;
+  font-size: 1rem;
+  color: white;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
