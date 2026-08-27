@@ -28,22 +28,10 @@
   max-width: 1350px;
 }
 
-.projetos-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-}
-
 .projetos-card:hover {
   box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
   transform: translateY(-10px) scale(1.03);
   transition: all 0.5s ease;
-}
-
-.caixa-textos-projetos{
-  padding: 1.5rem;
 }
 
 .paragrafo-projetos{
@@ -55,13 +43,51 @@
   text-decoration: none;
   margin-top: auto;      
   font-weight: 700;
-  color: #425cff;
+  color: white;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 
-
 .info-projetos{
   margin-bottom: 5px;
+}
+
+.projetos-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.caixa-textos-projetos {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ver-projeto {
+  display: inline-block;
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(to right, #1e1b4b, #ec4899);
+  box-shadow: 0 0 8px #ec4899, 0 0 16px #ec4899;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.ver-projeto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }

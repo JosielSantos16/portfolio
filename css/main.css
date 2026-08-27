@@ -80,21 +80,24 @@ span{
 .intro-text {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Mude de flex-start para center */
-  text-align: center;  /* Garante que o texto também centralize */
+  align-items: flex-start;
+  text-align: left;
 }
 
 .intro-text ul { display: flex; gap: 1.5rem; margin: 1.5rem 0; }
 .intro-text ul li{ list-style-type: none;}
 
-.intro-image{
-  margin-right: 100px;
+.intro-image {
+  margin-right: 50px;
+  margin-top: 40px;
   animation: flutuar 5s ease-in-out infinite;
 }
 
 .intro-image img {
   border-radius: 50%;
   box-shadow: 0 0 8px #75dffe, 0 0 16px #75dffe;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 section {
